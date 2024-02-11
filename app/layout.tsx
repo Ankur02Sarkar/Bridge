@@ -7,6 +7,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { ConvexClientProvider } from "@/providers/convex-client-provider";
 import { ModalProvider } from "@/providers/modal-provider";
 import { Loading } from "@/components/auth/loading";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,15 +22,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <Suspense fallback={<Loading />}>
-          <ConvexClientProvider>
-            <Toaster />
-            <ModalProvider />
-            {children}
-          </ConvexClientProvider>
-        </Suspense>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Suspense fallback={<Loading />}>
+            <ConvexClientProvider>
+              <Toaster />
+              <ModalProvider />
+              {children}
+            </ConvexClientProvider>
+          </Suspense>
+        </ThemeProvider>
       </body>
     </html>
   );
