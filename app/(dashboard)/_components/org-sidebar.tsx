@@ -24,8 +24,8 @@ export const OrgSidebar = () => {
       <Link href="/">
         <div className="flex items-center gap-x-2">
           <Image
-            src="/logo.svg"
-            alt="Logo"
+            src="/bridgelogo.jpg"
+            alt="Bridge"
             height={60}
             width={60}
           />
@@ -33,7 +33,7 @@ export const OrgSidebar = () => {
             "font-semibold text-2xl",
             font.className,
           )}>
-            Board
+            Bridge
           </span>
         </div>
       </Link>

@@ -48,8 +48,8 @@ export const Info = ({
         <Button asChild variant="board" className="px-2">
           <Link href="/">
             <Image
-              src="/logo.svg"
-              alt="Board logo"
+              src="/bridgelogo.jpg"
+              alt="Bridge logo"
               height={40}
               width={40}
             />
@@ -57,7 +57,7 @@ export const Info = ({
               "font-semibold text-xl ml-2 text-black",
               font.className,
             )}>
-              Board
+              Bridge
             </span>
           </Link>
         </Button>
