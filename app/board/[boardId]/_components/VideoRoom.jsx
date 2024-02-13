@@ -33,9 +33,8 @@ export const VideoRoom = () => {
     const APP_ID = "bce5cb53ca574563a2f688deeea46471";
     const CHANNEL = "bridge";
     const url = window.location.href;
-    const split = url.split("&code=");
+    const split = url.split("?code=");
     const TOKEN = split[1];
-    // const TOKEN = url.searchParams.get("code");
 
     console.log("APP_ID : ", APP_ID);
     console.log("TOKEN : ", TOKEN);
@@ -78,8 +77,6 @@ export const VideoRoom = () => {
       <div className="flex flex-col gap-4">
         {users.map((user) => (
           <>
-            <VideoPlayer key={user.uid} user={user} />
-            <VideoPlayer key={user.uid} user={user} />
             <VideoPlayer key={user.uid} user={user} />
           </>
         ))}

@@ -18,7 +18,7 @@ const VideoCall = () => {
     let currToken = url.searchParams.get("code");
     if (!currToken) {
       const token = await fetchAccessToken();
-      const newUrl = window.location.href + "&code=" + token;
+      const newUrl = window.location.href + "?code=" + token;
       console.log("newUrl : ", newUrl);
       window.history.pushState({ path: newUrl }, "", newUrl);
     }
