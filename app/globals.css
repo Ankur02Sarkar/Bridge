@@ -84,6 +84,7 @@ body,
 .cl-organizationSwitcherTrigger:hover {
   color: white;
   background: rgb(75 85 99 / 1);
+  border: none;
 }
 
 .canvasMain button {
