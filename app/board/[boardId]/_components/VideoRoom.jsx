@@ -36,9 +36,6 @@ export const VideoRoom = () => {
     const split = url.split("?code=");
     const TOKEN = split[1];
 
-    console.log("APP_ID : ", APP_ID);
-    console.log("TOKEN : ", TOKEN);
-    console.log("CHANNEL : ", CHANNEL);
     client.on("user-published", handleUserJoined);
     client.on("user-left", handleUserLeft);
 

@@ -19,7 +19,6 @@ const VideoCall = () => {
     if (!currToken) {
       const token = await fetchAccessToken();
       const newUrl = window.location.href + "?code=" + token;
-      console.log("newUrl : ", newUrl);
       window.history.pushState({ path: newUrl }, "", newUrl);
     }
     setJoined(true);
